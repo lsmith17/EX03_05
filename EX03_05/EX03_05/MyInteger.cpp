@@ -1,11 +1,12 @@
 #include<iostream>
+using namespace std;
 class MyInteger
 {
 private:
 	int number;
 
 public:
-	const int getnumber()
+	int getnumber() const
 	{
 		return number;
 	}
@@ -15,7 +16,7 @@ public:
 		new_number = number;
 	}
 
-	const bool isPrime() 
+	bool isPrime() const
 	{
 		return isPrime(number);
 	}
@@ -41,7 +42,7 @@ public:
 		return true;
 	}
 
-	const bool isEven() 
+	bool isEven() const 
 	{
 		return isEven(number);
 	}
@@ -56,12 +57,12 @@ public:
 		return isEven(n.getnumber()); 
 	}
 
-	const bool equals(int anotherNum) 
+	bool equals(int anotherNum) const 
 	{
 		return number == anotherNum;
 	}
 
-	const bool equals(const MyInteger& l)
+	bool equals(const MyInteger& l) const
 	{
 		return number == l.getnumber(); //why is the 'l' underlined?
 	}
